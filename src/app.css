@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+:root{
+     --pry_font:"Roboto Condensed", sans-serif;
+     --pry-bgr: #D8C99B;
+     --pry-brd:#D8973C;
+     --pry-btn: #273E47;
+    }
+
+body{
+    font-family: var(--pry_font);
+    display: flex;
+    justify-content: center;
+    background-color: var(--pry-bgr);    
+}
+
+.container{
+    text-align: center;
+    border: 10px solid var(--pry-brd);
+    padding: 20px;
+    border-radius: 20px;
+    width: 18rem;
+}
+
+.resource-container{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+.button-container{
+    display: flex;
+}
+
+.playername{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.resource-container{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.resource-container span{
+    font-weight: 500;
+}
+
+.button-container button{
+    margin-left: 3px;
+    padding: 3px;
+    width: 60px;
+    background-color: var(--pry-btn);
+    color: var(--pry-bgr);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border:none
+}
+
+@media (max-width:600px){
+    .resource-container{
+     
+        flex-direction: column; 
+        text-align: center;
+        justify-content: center;
+    }
+
+    .playername{
+        font-size: 4rem;
+    }
+    
+}
