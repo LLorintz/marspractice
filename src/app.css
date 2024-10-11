@@ -41,6 +41,7 @@ body{
 }
 
 .playername{
+   
     font-size: 3rem;
     margin-bottom: 20px;
 }
@@ -62,10 +63,34 @@ body{
     color: var(--pry-bgr);
     font-size: 1.2rem;
     border-radius: 10px;
-    border:none
+    border:none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.button-container button:hover{
+    background-color: var(--pry-brd);
+    color: var(--pry-btn);
+}
+
+.button-container button:active{
+    background-color: #b67111;
+    
+}
+
+
+
 @media (max-width:600px){
+
+    body{
+        display: inline;
+    }
+
+    .container{
+        width: 100%;
+        border: none;
+    }
+
     .resource-container{
      
         flex-direction: column; 
@@ -75,6 +100,21 @@ body{
 
     .playername{
         font-size: 4rem;
+    }
+
+    
+    .button-container button{
+        width: 140px;
+        height: 70px;
+    }
+
+    .resource-container{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    
+    .resource-container span{
+        font-weight: 600;
     }
     
 }
