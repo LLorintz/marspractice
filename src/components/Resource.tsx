@@ -5,19 +5,15 @@ export type resourceType={
     onAmountChange: (newValue:number)=>void
 }
 
-type ResourceObjType={
-    Obj:resourceType
-}
-
-const Resource = ({Obj}:ResourceObjType) => {
+const Resource = ({name, amount, onAmountChange}:resourceType) => {
   return (
 <div className="resource-container">
     <div className="resource">
-        <p>{Obj.name}: <span>{Obj.amount}</span></p>
+        <p>{name}: <span>{amount}</span></p>
     </div>
     <div className="button-container">
-        <button type="button" onClick={()=>Obj.onAmountChange(+1)}>+</button>
-        <button type="button" onClick={()=>Obj.onAmountChange(-1)}>-</button>
+        <button type="button" onClick={()=>onAmountChange(+1)}>+</button>
+        <button type="button" onClick={()=>onAmountChange(-1)}>-</button>
     </div>
 </div>
   )

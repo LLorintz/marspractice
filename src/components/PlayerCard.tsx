@@ -20,7 +20,7 @@ const steelObj:resourceType={
   return (
     <div>
         <p className="playername">Player Name</p>
-        <Resource Obj={steelObj}></Resource>
+        <Resource {...steelObj}></Resource>
         <div className="resource-container">
             <div className="resource">
                 <p>Steel: <span>50</span></p>
